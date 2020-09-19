@@ -1,3 +1,5 @@
+//Apresente no console cada um dos atributos desse JSON
+
 const obj = [
       {
         "title": "Castle in the Sky",
