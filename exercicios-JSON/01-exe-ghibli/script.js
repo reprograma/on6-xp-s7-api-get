@@ -1,4 +1,4 @@
-//Apresente no console cada um dos atributos desse JSON
+//Apresente no console cada um dos atributos desse JS
 
 const obj = [
       {
@@ -24,3 +24,11 @@ const obj = [
     ]
 
     // COMEÇA O EXERCÍCIO
+  
+
+for(let i=0; i < obj.length; i++){
+  let filmes = obj[i]
+  console.log(filmes)
+  console.log(filmes.title)
+  console.log(filmes.description)
+}
