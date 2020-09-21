@@ -1,0 +1,24 @@
+{
+  "name": "on6-xp-s7-api-get",
+  "version": "1.0.0",
+  "description": "Atividade da semana 7",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TainaraMoreno/on6-xp-s7-api-get.git"
+  },
+  "author": "Tainara Moreno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TainaraMoreno/on6-xp-s7-api-get/issues"
+  },
+  "homepage": "https://github.com/TainaraMoreno/on6-xp-s7-api-get#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
