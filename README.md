@@ -20,8 +20,8 @@
     ```bash
     \--📂 NOME-DO-SEU-SERVIDOR
     	   |   server.js
-    		 |
-    			\--📂src
+    	   |
+    		\--📂src
     			    |   app.js
     			    |
     			    📂---controller
@@ -229,7 +229,7 @@
     		 |   .gitignore
     		 |   package-lock.json
     		 |   package.json
-    	   |   server.js
+    	     |   server.js
     		 |
     			\--📂src
     			    |   app.js
@@ -275,7 +275,7 @@
 ----
 
 ## Ana Luiza Sampaio
-[instagram](https://www.instagram.com/analu.io/?hl=pt-br)
-[linkedin](https://www.linkedin.com/in/sampaioaanaluiza/)
-[github](https://github.com/analuizasampaio)
-email: sampaioaanaluiza@gmail.com
+- [instagram](https://www.instagram.com/analu.io/?hl=pt-br)
+- [linkedin](https://www.linkedin.com/in/sampaioaanaluiza/)
+- [github](https://github.com/analuizasampaio)
+- email: sampaioaanaluiza@gmail.com
