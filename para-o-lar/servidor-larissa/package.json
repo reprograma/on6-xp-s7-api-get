@@ -1,0 +1,24 @@
+{
+  "name": "servidor-larissa",
+  "version": "1.0.0",
+  "description": "servidor criado para entrega s7 {reprograma}",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/botelholarissa/on6-xp-s7-api-get.git"
+  },
+  "author": "Larissa Botelho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/botelholarissa/on6-xp-s7-api-get/issues"
+  },
+  "homepage": "https://github.com/botelholarissa/on6-xp-s7-api-get#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
