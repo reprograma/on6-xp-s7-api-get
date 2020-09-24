@@ -1,0 +1,16 @@
+{
+  "name": "para-o-lar",
+  "version": "1.0.0",
+  "description": "Assim como feito em aula crie um servidor que retorne os Json que estão dentro da pasta model.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Phabliny",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
