@@ -1,0 +1,19 @@
+{
+  "name": "treinando-servidor-get",
+  "version": "1.0.0",
+  "description": "1. Garanta que você tem o node e o npm instalado no seu computador, no seu terminal escreva:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdileneLopes/on6-xp-s7-api-get.git"
+  },
+  "author": "Edilene Lopes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdileneLopes/on6-xp-s7-api-get/issues"
+  },
+  "homepage": "https://github.com/EdileneLopes/on6-xp-s7-api-get#readme"
+}
