@@ -1,10 +1,5 @@
-const express = require('express');
-const app = express()
+const app = require("./src/app")
 
+const PORT = 8001
 
-
-app.get('/', function (request, response) {
-    response.send('Server listen in port 8080')
-})
-
-app.listen(8080)
+app.listen(PORT, () => console.log(`O nosso app está rodando na porta ${PORT}`))
