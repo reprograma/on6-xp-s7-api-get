@@ -5,6 +5,14 @@ const getAll = (request, response) =>{
     response.status(200).send(estcidades)
 }
 
+//buscando pela sigla/estados
+const getSigla = (request, response) => {
+    const siglaEstados = request.params.siglaEstados
+    console.log(siglaEstados);
+    response.status(200).send(estcidades.find(estados => estados.siglaEstados == siglaEstados))
+}
+
 module.exports = {
-    getAll
+    getAll,
+    getSigla
 }

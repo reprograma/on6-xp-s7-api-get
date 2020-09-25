@@ -5,4 +5,5 @@ const controller = require('../controller/ghibliController')
 
 router.get('/', controller.getAll)
 
+
 module.exports = router

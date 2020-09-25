@@ -1,6 +1,6 @@
 const app = require("./src/app")
 
-const PORT = 8080
+const PORT = 3001
 
 //FUNÇÃO
 app.listen(PORT, function() {
