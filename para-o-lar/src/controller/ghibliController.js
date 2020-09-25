@@ -13,12 +13,25 @@ const getById = (request, response) => {
     const idRequested = ghibli.find(item => item.id == id)
 
     if(!idRequested) {
-        return response.status(400).send({ message: 'Filme não encontrado.'})
+        return response.status(400).send('Filme não encontrado.')
     }
     return response.status(200).send(idRequested)
 }
 
+//Para retornar filmes pro gênero
+const getByGenre = (request, response) => {
+    const filmGenre = request.params.filmeGenre
+    const genreCapitalized = filmGenre.charAt(0).toUpperCase() + filmGenre.slice(1)
+    const genreRequested = ghibli.filter(item => item.genero == genreCapitalized)
+
+    if(!genreRequested) {
+        return response.status(400).send('Gênero não encontrado.')
+    }
+    return response.status(200).send(genreRequested)
+}
+
 module.exports = {
     getAll,
-    getById
+    getById,
+    getByGenre
 }
