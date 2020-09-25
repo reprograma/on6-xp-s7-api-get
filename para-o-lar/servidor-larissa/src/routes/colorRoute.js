@@ -7,6 +7,7 @@ const controller = require('../controllers/colorController')
 
 //criei a rota usando a função que está em controller
 router.get("/", controller.getAll)
+router.get("/:color/search", controller.getByColor)
 
 //exportei a rota para usar no app usando module.exports
 module.exports = router
