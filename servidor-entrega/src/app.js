@@ -8,7 +8,7 @@ app.use("/filmesGhibli", ghibli)
 const filmes = require("./routes/filmesRoute")
 app.use("/filmesAmericanos", filmes)
 
-const estados = require("./routes/estados-cidadesRoute")
+const estados = require("./routes/estadosRoute")
 app.use("/estadosBrasileiros", estados)
 
 const colors = require("./routes/colors-rgbRoute")
