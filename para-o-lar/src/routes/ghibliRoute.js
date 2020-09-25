@@ -3,5 +3,6 @@ const router = express.Router()
 const controller = require("../controller/ghibliController")
 
 router.get("/", controller.getAll)
+router.get("/:id", controller.getById)
 
 module.exports =  router
