@@ -1,0 +1,18 @@
+{
+  "name": "servidor-naiara",
+  "version": "1.0.0",
+  "description": "Assim como feito em aula crie um servidor que retorne os Json que estão dentro da pasta model.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "node": "^14.12.0",
+    "nodemon": "^2.0.4"
+  }
+}
