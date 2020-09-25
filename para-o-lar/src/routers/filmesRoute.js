@@ -6,6 +6,6 @@ const router = express.Router()
 
 const controller = require("../controllers/filmesController")
 
-router.get("/filmes", controller.getAll)
+router.get("/", controller.getAll)
 
 module.exports = router

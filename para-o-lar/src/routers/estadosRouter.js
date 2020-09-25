@@ -4,6 +4,6 @@ const router = express.Router()
 
 const controller = require("../controllers/estadosController")
 
-router.get("/estados", controller.getAll)
+router.get("/", controller.getAll)
 
 module.exports = router
