@@ -9,8 +9,11 @@ const getAll = (request, response)  => {
     response.status(200).send(filmes)
 }
 
-
-
+const getByYear = (request,response) => {
+   
+    const year = request.params.year
+    response.status(200).send(filmes.find(filme => filme.Year == year))
+}
 /*const getByGenre = (request,response) => {
     const genre = request.params.genre
     response.status(200).send(filmes.find(filme => filme.genre == genre))
@@ -19,5 +22,5 @@ const getAll = (request, response)  => {
 //exportar a função GetALL para ser usado em outro arquivo
 module.exports = {
     getAll, 
-   
+   getByYear
 }
