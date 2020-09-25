@@ -6,7 +6,7 @@ const getAll = (request, response) => {
     response.status(200).send(colors)
 }
 
-//vou tentar criar o getByCollor
+//criei uma função para retornar o RGB pesquisando por cor
 
 const getByColor = (request, response) => {
     const colorParam = request.params.color

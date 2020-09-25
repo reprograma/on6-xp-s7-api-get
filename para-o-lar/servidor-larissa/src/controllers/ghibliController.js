@@ -7,8 +7,22 @@ const getAll = (request, response) => {
     response.status(200).send(ghibli)
 }
 
-//exportando a função getAll 
+//criando função para pesquisar filmes por título
+const getByTitle = (request, response) => {
+    const titleParam = request.params.title
+    const filmTitle = ghibli.find(filme => filme.title == titleParam)
+    console.log(filmTitle)
+    
+    if(!filmTitle){
+        response.status(404).send({message: "Esse filme não existe."})
+    } else {
+        response.status(200).send(filmTitle)
+    }
+}
+
+//exportando as funções
 
 module.exports = {
-    getAll
+    getAll,
+    getByTitle
 }
