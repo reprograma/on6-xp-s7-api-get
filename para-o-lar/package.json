@@ -1,0 +1,16 @@
+{
+  "name": "para-o-lar",
+  "version": "1.0.0",
+  "description": "Criação de três servidores que retornam os Json que estão dentro da pasta model.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lílian Teixeira",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
