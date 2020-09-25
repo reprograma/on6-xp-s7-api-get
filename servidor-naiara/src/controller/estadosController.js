@@ -5,7 +5,7 @@ const getAll = (request,response) => {
     response.status(200).send(estados)
 }
 
-
+//buscando pela id
 const getById = (request,response) => {
     const id = request.params.id
     if (id > 27 || id <= 0){
