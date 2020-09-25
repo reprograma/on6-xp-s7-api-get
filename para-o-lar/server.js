@@ -1,6 +1,6 @@
 // trazer as portas, para isso criamos o express
 
-const app = require("./src/app") 
+const app = require("./app") 
 
 const PORT = 3001
 app.listen(PORT, function (){

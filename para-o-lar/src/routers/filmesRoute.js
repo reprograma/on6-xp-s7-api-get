@@ -4,7 +4,7 @@ const express = require("express")
 
 const router = express.Router()
 
-const controller = require("../controller/filmesController")
+const controller = require("../controllers/filmesController")
 
 router.get("/filmes", controller.getAll)
 
