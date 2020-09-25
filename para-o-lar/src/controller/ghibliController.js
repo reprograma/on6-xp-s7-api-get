@@ -18,7 +18,7 @@ const getById = (request, response) => {
     return response.status(200).send(idRequested)
 }
 
-//Para retornar filmes pro gênero
+//Para retornar filmes por gênero
 const getByGenre = (request, response) => {
     const filmGenre = request.params.filmeGenre
     const genreCapitalized = filmGenre.charAt(0).toUpperCase() + filmGenre.slice(1)
