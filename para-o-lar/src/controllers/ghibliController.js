@@ -5,13 +5,15 @@ const getAll =  (request, response) => {
     response.status(200).send(ghibli)
 }
 
-const getByTitle = (request, response) => {
-    const title = request.params.title
-
-    response.status(200).send(ghibli.find(title => ghibli.title== title))
-   
+const getById = (request, response) => {
+    const id = request.params.id
+    if(id >5 || id <0){
+        response.status(404).send("ID não encontrado")
+    }else{
+        response.status(200).send(ghibli.find(ghibli => ghibli.id == id))
+    }
 }
 module.exports = {
     getAll,
-    getByTitle
+    getById
 }
