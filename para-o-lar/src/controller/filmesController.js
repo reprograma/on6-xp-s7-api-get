@@ -62,6 +62,17 @@ const getByWriter = (request, response) => {
     return response.status(200).send(searchByWriter)
 }
 
+//Filmes por nome de ator - digitar só uma palavra contida no nome do ator
+const getByActor = (request, response) => {
+    const actor = request.params.actor
+    const searchByActor = filmes.filter(item => item.Actors.toLowerCase().includes(actor))
+
+    if(searchByActor == false) {
+        return response.status(400).send('Ator/Atriz não encontrado(a).')
+    }
+    return response.status(200).send(searchByActor)
+}
+
 
 module.exports = {
     getAll,
@@ -69,5 +80,6 @@ module.exports = {
     getByYear,
     getByGenre,
     getByDirector,
-    getByWriter
+    getByWriter,
+    getByActor
 }
