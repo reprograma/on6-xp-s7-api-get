@@ -21,10 +21,10 @@ const getById = (request, response) => {
 //Para retornar filmes por gênero
 const getByGenre = (request, response) => {
     const filmGenre = request.params.filmGenre
-    const genreCapitalized = filmGenre.charAt(0).toUpperCase() + filmGenre.slice(1)
+    const genreCapitalized = filmGenre.charAt(0).toUpperCase() + filmGenre.slice(1).toLowerCase()
     const genreRequested = ghibli.filter(item => item.genero == genreCapitalized)
 
-    if(!genreRequested) {
+    if(genreRequested == false) {
         return response.status(400).send('Gênero não encontrado.')
     }
     return response.status(200).send(genreRequested)
@@ -33,13 +33,10 @@ const getByGenre = (request, response) => {
 //Para encontrar filme digitando alguma palavra que esteja no título
 const getByTitle = (request, response) => {
     const filmTitle = request.params.filmTitle
-    const searchFilm = ghibli.filter(item => {
-        const title = item.titulo.toLowerCase();
-        return title.includes(filmTitle)
-    })
+    const searchFilm = ghibli.filter(item => item.titulo.toLowerCase().includes(filmTitle))
 
-    if(!searchFilm) {
-        return response.status(400).send('Filme não encontrado.')
+    if(searchFilm == false) {
+        return response.status(400).send('Título não encontrado.')
     }
     return response.status(200).send(searchFilm)
 }
