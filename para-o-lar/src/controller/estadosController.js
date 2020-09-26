@@ -1,5 +1,5 @@
 const { request, response } = require("../app")
-const dataBase = require("../models/estados-cidades-copy.json")
+const dataBase = require("../models/estados-cidades.json")
 
 //Retorna todos os estados
 const getAll = (request, response) => {
@@ -28,8 +28,22 @@ const getStateByName = (request, response) => {
     return response.status(200).send(searchState)
 }
 
+//Tentativa de retornar uma cidade de qualquer estado
+const getCity = (request, response) => {
+    const city = request.params.city
+    const searchCity = dataBase.estados.forEach((item) => {
+        return item.cidades.filter(item => item.toLowerCase().includes(city))
+    })
+
+    if(searchCity == false) {
+        return response.status(400).send('Cidade não encontrada.')
+    }
+    return response.status(200).send(searchCity)
+}
+
 module.exports = {
     getAll,
     getState,
-    getStateByName
+    getStateByName,
+    getCity
 }
