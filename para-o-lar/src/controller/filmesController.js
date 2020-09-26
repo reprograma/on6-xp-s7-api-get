@@ -7,20 +7,21 @@ const getAll = (request, response) =>{
     response.status(200).send(filmes)
 }
 
-//Para retornar filmes por gênero
-const getByGenre = (request, response) => {
-    const filmGenre = request.params.filmeGenre
-    const genreCapitalized = filmGenre.charAt(0).toUpperCase() + filmGenre.slice(1)
-    const genreRequested = ghibli.filter(item => item.genero == genreCapitalized)
+//Para retornar filmes por título
+const getByTitle = (request, response) => {
+    const filmTitle = request.params.filmTitle
+    const searchFilm = filmes.filter(item => {
+        const title = item.Title.toLowerCase();
+        return title.includes(filmTitle)
+    })
 
-    if(!genreRequested) {
-        return response.status(400).send('Gênero não encontrado.')
+    if(!searchFilm) {
+        return response.status(400).send('Filme não encontrado.')
     }
-    return response.status(200).send(genreRequested)
+    return response.status(200).send(searchFilm)
 }
-
 
 module.exports = {
     getAll,
-    getByGenre
+    getByTitle
 }
