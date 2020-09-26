@@ -17,7 +17,19 @@ const getState = (request, response) => {
     return response.status(200).send(searchState)
 }
 
+//Retorna os estados que contenham determinada palavra inclusa em seu nome
+const getStateByName = (request, response) => {
+    const state = request.params.state
+    const searchState = estados.filter(item => item.nome.toLowerCase().includes(state))
+
+    if(searchState == false) {
+        return response.status(400).send('Estado não encontrado.')
+    }
+    return response.status(200).send(searchState)
+}
+
 module.exports = {
     getAll,
-    getState
+    getState,
+    getStateByName
 }
