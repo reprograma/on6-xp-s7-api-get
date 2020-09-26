@@ -1,0 +1,23 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "\"Atividade da semana 7 Api-Get\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pascoa21/on6-xp-s7-api-get.git"
+  },
+  "author": "Jessyca Pascoa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pascoa21/on6-xp-s7-api-get/issues"
+  },
+  "homepage": "https://github.com/pascoa21/on6-xp-s7-api-get#readme",
+  "dependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
