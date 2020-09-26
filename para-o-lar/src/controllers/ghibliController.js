@@ -1,5 +1,5 @@
 const filmes = require("../models/ghibli.json")
-const { request, response } = require("express")
+
 
 const getAll = (request, response) =>{
     response.status(200).send(filmes)
@@ -20,7 +20,7 @@ const getById = (request, response) => { // pedir da url e encontrar o q foi sol
 const getByGenero = (request, response) => {
     const generoFilme = request.params.generoFilme
 
-    const genero = filmes.filter(filme => filme.genero == generoFilme)
+    const genero = filmes.filter(filme => filme.genero.toLowerCase() == generoFilme.toLowerCase())
 
     if(genero) {
         return response.status(200).send(genero)

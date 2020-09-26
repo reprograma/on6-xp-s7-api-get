@@ -11,7 +11,7 @@ const getAll = (request, response) =>{
 const getBySigla = (request, response) => {
     const sigla = request.params.sigla
     
-    const estadoEncontrado = dados.estados.find(estado => estado.sigla == sigla)
+    const estadoEncontrado = dados.estados.find(estado => estado.sigla.toLowerCase() == sigla.toLowerCase())
     
     if(estadoEncontrado) {
         return response.status(200).send(estadoEncontrado)
@@ -26,7 +26,7 @@ const getBySigla = (request, response) => {
 const getCidades = (request, response) => {
     const sigla = request.params.sigla
     
-    const estadoEncontrado = dados.estados.find(estado => estado.sigla == sigla)
+    const estadoEncontrado = dados.estados.find(estado => estado.sigla.toLowerCase() == sigla.toLowerCase)
     
     if(estadoEncontrado) {
         return response.status(200).send(estadoEncontrado.cidades)

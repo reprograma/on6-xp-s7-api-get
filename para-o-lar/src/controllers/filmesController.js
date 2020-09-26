@@ -9,7 +9,7 @@ const getAll = (request, response) =>{
 const getByTitle = (request, response) => {
     const title = request.params.title
 
-    const filmeEncontrado = filmes.find(filme => filme.Title == title)
+    const filmeEncontrado = filmes.find(filme => filme.Title.toLowerCase() == title.toLowerCase())
 
     if(filmeEncontrado) {
         return response.status(200).send(filmeEncontrado)
@@ -35,7 +35,7 @@ const getByYear = (request, response) => {
 const getByDirector = (request, response) =>{
     const director = request.params.director
     
-    const filmeEncontrado = filmes.find(filme => filme.Director == director)
+    const filmeEncontrado = filmes.find(filme => filme.Director.toLowerCase() == director.toLowerCase())
 
     if(filmeEncontrado) {
         return response.status(200).send(filmeEncontrado)
