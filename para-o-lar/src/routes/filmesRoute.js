@@ -10,5 +10,6 @@ router.get("/diretor/:director", controller.getByDirector)
 router.get("/roteirista/:writer", controller.getByWriter)
 router.get("/ator/:actor", controller.getByActor)
 router.get("/idioma/:language", controller.getByLanguage)
+router.get("/pais/:country", controller.getByCountry)
 
 module.exports = router

@@ -84,6 +84,17 @@ const getByLanguage = (request, response) => {
     return response.status(200).send(searchByLanguage)
 }
 
+//Filmes por país
+const getByCountry = (request, response) => {
+    const country = request.params.country
+    const searchByCountry = filmes.filter(item => item.Country.toLowerCase().includes(country))
+
+    if(searchByCountry == false) {
+        return response.status(400).send('País não encontrado(a).')
+    }
+    return response.status(200).send(searchByCountry)
+}
+
 
 module.exports = {
     getAll,
@@ -93,5 +104,6 @@ module.exports = {
     getByDirector,
     getByWriter,
     getByActor,
-    getByLanguage
+    getByLanguage,
+    getByCountry
 }
