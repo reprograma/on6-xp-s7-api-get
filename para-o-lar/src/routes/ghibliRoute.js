@@ -4,7 +4,7 @@ const controller = require("../controller/ghibliController")
 
 router.get("/", controller.getAll)
 router.get("/:id", controller.getById)
-router.get("/:filmeGenre/buscar", controller.getByGenre)
-router.get("/:filmeTitle/search", controller.getByTitle)
+router.get("/:filmGenre/buscar", controller.getByGenre)
+router.get("/:filmTitle/search", controller.getByTitle)
 
 module.exports = router

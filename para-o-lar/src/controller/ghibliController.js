@@ -20,7 +20,7 @@ const getById = (request, response) => {
 
 //Para retornar filmes por gênero
 const getByGenre = (request, response) => {
-    const filmGenre = request.params.filmeGenre
+    const filmGenre = request.params.filmGenre
     const genreCapitalized = filmGenre.charAt(0).toUpperCase() + filmGenre.slice(1)
     const genreRequested = ghibli.filter(item => item.genero == genreCapitalized)
 
@@ -31,9 +31,6 @@ const getByGenre = (request, response) => {
 }
 
 //Para encontrar filme digitando alguma palavra que esteja no título
-
-/*essa função de pegar pelo título não está funcionando om o ghibli, mas funciona com filmes.
-Se puder me dizer onde estou errando, agradeço rs */
 const getByTitle = (request, response) => {
     const filmTitle = request.params.filmTitle
     const searchFilm = ghibli.filter(item => {
