@@ -1,5 +1,4 @@
-{
-    "estados": [
+[
       {
         "sigla": "AC",
         "nome": "Acre",
@@ -5732,5 +5731,4 @@
           "Xambioá"
         ]
       }
-    ]
-}
+]
