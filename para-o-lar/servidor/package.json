@@ -1,0 +1,25 @@
+{
+    "name": "servidor",
+    "version": "1.0.0",
+    "description": "iniciando o servidor",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GraciLopes/on6-xp-s7-api-get.git"
+    },
+    "author": "Graciela Lopes",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/GraciLopes/on6-xp-s7-api-get/issues"
+    },
+    "homepage": "https://github.com/GraciLopes/on6-xp-s7-api-get#readme",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "nodemon": "^2.0.4"
+    }
+}
