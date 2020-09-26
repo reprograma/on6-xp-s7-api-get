@@ -1,0 +1,23 @@
+{
+  "name": "para-o-lar_estadoscidades",
+  "version": "1.0.0",
+  "description": "Desafio semana 7 WebApi-MVC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LaisMaas"
+  },
+  "author": "lais-lopes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaisMaas"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}

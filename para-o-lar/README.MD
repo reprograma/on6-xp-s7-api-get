@@ -1,4 +1,4 @@
-# Projeto para o lar
+# Projeto para-o-lar
 
 Assim como feito em aula crie um servidor que retorne os Json que estão dentro da pasta model.
 
