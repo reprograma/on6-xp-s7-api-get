@@ -21,7 +21,21 @@ const getByTitle = (request, response) => {
     return response.status(200).send(searchFilm)
 }
 
+//Retornar filmes por ano
+const getByYear = (request, response) => {
+    const year = request.params.year
+    const searchByYear = filmes.filter(item => item.Year == year)
+
+    if(!searchByYear) {
+        return response.status(400).send(`Não há títulos lançados no ano de ${year}.`)
+    }
+    return response.status(200).send(searchByYear)
+}
+
+//Filmes por gênero
+
 module.exports = {
     getAll,
-    getByTitle
+    getByTitle,
+    getByYear
 }
