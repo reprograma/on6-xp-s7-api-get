@@ -51,11 +51,23 @@ const getByDirector = (request, response) => {
     return response.status(200).send(searchByDirector)
 }
 
+//Filmes por nome do roteirista - digitar só uma palavra contida no nome do roteirista
+const getByWriter = (request, response) => {
+    const writer = request.params.writer
+    const searchByWriter = filmes.filter(item => item.Writer.toLowerCase().includes(writer))
+
+    if(searchByWriter == false) {
+        return response.status(400).send('Roteirista não encontrado.')
+    }
+    return response.status(200).send(searchByWriter)
+}
+
 
 module.exports = {
     getAll,
     getByTitle,
     getByYear,
     getByGenre,
-    getByDirector
+    getByDirector,
+    getByWriter
 }
