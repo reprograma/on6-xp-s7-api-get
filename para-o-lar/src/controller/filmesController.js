@@ -13,7 +13,7 @@ const getByTitle = (request, response) => {
     const searchFilm = filmes.filter(item => item.Title.toLowerCase().includes(filmTitle))
 
     if(searchFilm == false) {
-        return response.status(400).send('Filme não encontrado.')
+        return response.status(400).send('Título não encontrado.')
     }
     return response.status(200).send(searchFilm)
 }
