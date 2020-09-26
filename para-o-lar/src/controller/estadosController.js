@@ -28,7 +28,7 @@ const getStateByName = (request, response) => {
     return response.status(200).send(searchState)
 }
 
-//Tentativa de retornar uma cidade de qualquer estado
+//Tentativa de retornar uma cidade de qualquer estado. Ainda não está funcionando
 const getCity = (request, response) => {
     const city = request.params.city
     const searchCity = dataBase.estados.forEach((item) => {
