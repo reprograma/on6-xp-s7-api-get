@@ -7,7 +7,7 @@ const getAll = (request, response) =>{
     response.status(200).send(filmes)
 }
 
-//Para retornar filmes por título
+//Para retornar filmes por título - digitar uma palavra que esteja contida no título
 const getByTitle = (request, response) => {
     const filmTitle = request.params.filmTitle
     const searchFilm = filmes.filter(item => item.Title.toLowerCase().includes(filmTitle))
