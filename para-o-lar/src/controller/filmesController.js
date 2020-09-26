@@ -73,6 +73,17 @@ const getByActor = (request, response) => {
     return response.status(200).send(searchByActor)
 }
 
+//Filmes por idioma
+const getByLanguage = (request, response) => {
+    const language = request.params.language
+    const searchByLanguage = filmes.filter(item => item.Language.toLowerCase().includes(language))
+
+    if(searchByLanguage == false) {
+        return response.status(400).send('Idioma não encontrado(a).')
+    }
+    return response.status(200).send(searchByLanguage)
+}
+
 
 module.exports = {
     getAll,
@@ -81,5 +92,6 @@ module.exports = {
     getByGenre,
     getByDirector,
     getByWriter,
-    getByActor
+    getByActor,
+    getByLanguage
 }

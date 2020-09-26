@@ -9,5 +9,6 @@ router.get("/genero/:filmGenre", controller.getByGenre)
 router.get("/diretor/:director", controller.getByDirector)
 router.get("/roteirista/:writer", controller.getByWriter)
 router.get("/ator/:actor", controller.getByActor)
+router.get("/idioma/:language", controller.getByLanguage)
 
 module.exports = router
