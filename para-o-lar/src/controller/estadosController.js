@@ -7,17 +7,17 @@ const getAll = (request, response) => {
 }
 
 //Retorna um estado pela sigla e todas as suas cidades
-const getEstate = (request, response) => {
-    const estate = request.params.estate
-    const searchEstate = estados.find(item => estate.toUpperCase() == item.sigla)
+const getState = (request, response) => {
+    const state = request.params.state
+    const searchState = estados.find(item => state.toUpperCase() == item.sigla)
 
-    if(!searchEstate) {
+    if(!searchState) {
         return response.status(400).send('Estado não encontrado.')
     }
-    return response.status(200).send(searchEstate)
+    return response.status(200).send(searchState)
 }
 
 module.exports = {
     getAll,
-    getEstate
+    getState
 }
