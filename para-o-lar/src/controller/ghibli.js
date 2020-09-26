@@ -1,8 +1,8 @@
-const filmes = require("../models/filmes.json")
+const produtor = require("../models/ghibli.json")
 
 const getAll = (request, response) =>{
     console.log(request.url)
-    response.status(200).send(filmes)
+    response.status(200).send(produtor)
 }
 
 module.exports = {

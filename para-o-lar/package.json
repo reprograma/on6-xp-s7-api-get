@@ -1,5 +1,5 @@
 {
-  "name": "package.json",
+  "name": "para-o-lar",
   "version": "1.0.0",
   "description": "\"Atividade da semana 7 Api-Get\"",
   "main": "app.js",
@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/pascoa21/on6-xp-s7-api-get#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "nodemon": "^2.0.4"
   }
 }
