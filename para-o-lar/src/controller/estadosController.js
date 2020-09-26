@@ -6,8 +6,8 @@ const getAll = (request, response) => {
     response.status(200).send(estados)
 }
 
-//Retorna um estado e todas as suas cidades
-const getAllCities = (request, response) => {
+//Retorna um estado pela sigla e todas as suas cidades
+const getEstate = (request, response) => {
     const estate = request.params.estate
     const searchEstate = estados.find(item => estate.toUpperCase() == item.sigla)
 
@@ -19,5 +19,5 @@ const getAllCities = (request, response) => {
 
 module.exports = {
     getAll,
-    getAllCities
+    getEstate
 }
