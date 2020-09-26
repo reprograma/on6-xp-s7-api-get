@@ -30,6 +30,27 @@ const getByGenre = (request, response) => {
     return response.status(200).send(genreRequested)
 }
 
+//Para encontrar filme digitando alguma palavra que esteja no título
+// const getByTitle = (request, response) => {
+//     //const titleLowerCased = ghibli.titulo.toLowerCase()
+//     const filmTitle = request.params.filmTitle
+//     const titleFromGhibli = ghibli.titulo.toLowerCase()
+//     const titleToArray = titleFromGhibli.split(" ")
+//     const titleRequested = titleToArray.filter(item => item == filmTitle)
+
+//     console.log(tittleFromGhibli);
+//     console.log(titleToArray);
+//     // ghibli.filter(item => (item.titulo).toLowerCase() == filmTitle)
+//     // books.filter(book => (
+//     //     book.genres.includes('short stories') || book.genres.includes('essays')
+//     //   ))
+
+//     // if(!titleRequested) {
+//     //     return response.status(400).send('Filme não encontrado.')
+//     // }
+//     // return response.status(200).send(titleRequested)
+// }
+
 module.exports = {
     getAll,
     getById,
