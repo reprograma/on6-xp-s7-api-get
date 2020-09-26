@@ -31,28 +31,25 @@ const getByGenre = (request, response) => {
 }
 
 //Para encontrar filme digitando alguma palavra que esteja no título
-// const getByTitle = (request, response) => {
-//     //const titleLowerCased = ghibli.titulo.toLowerCase()
-//     const filmTitle = request.params.filmTitle
-//     const titleFromGhibli = ghibli.titulo.toLowerCase()
-//     const titleToArray = titleFromGhibli.split(" ")
-//     const titleRequested = titleToArray.filter(item => item == filmTitle)
 
-//     console.log(tittleFromGhibli);
-//     console.log(titleToArray);
-//     // ghibli.filter(item => (item.titulo).toLowerCase() == filmTitle)
-//     // books.filter(book => (
-//     //     book.genres.includes('short stories') || book.genres.includes('essays')
-//     //   ))
+/*essa função de pegar pelo título não está funcionando om o ghibli, mas funciona com filmes.
+Se puder me dizer onde estou errando, agradeço rs */
+const getByTitle = (request, response) => {
+    const filmTitle = request.params.filmTitle
+    const searchFilm = ghibli.filter(item => {
+        const title = item.titulo.toLowerCase();
+        return title.includes(filmTitle)
+    })
 
-//     // if(!titleRequested) {
-//     //     return response.status(400).send('Filme não encontrado.')
-//     // }
-//     // return response.status(200).send(titleRequested)
-// }
+    if(!searchFilm) {
+        return response.status(400).send('Filme não encontrado.')
+    }
+    return response.status(200).send(searchFilm)
+}
 
 module.exports = {
     getAll,
     getById,
-    getByGenre
+    getByGenre,
+    getByTitle
 }
