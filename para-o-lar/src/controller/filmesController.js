@@ -40,10 +40,22 @@ const getByGenre = (request, response) => {
     return response.status(200).send(searchByGenre)
 }
 
+//Filmes por nome do diretor - digitar só uma palavra que faça parte do nome do diretor
+const getByDirector = (request, response) => {
+    const director = request.params.director
+    const searchByDirector = filmes.filter(item => item.Director.toLowerCase().includes(director))
+
+    if(searchByDirector == false) {
+        return response.status(400).send('Diretor não encontrado.')
+    }
+    return response.status(200).send(searchByDirector)
+}
+
 
 module.exports = {
     getAll,
     getByTitle,
     getByYear,
-    getByGenre
+    getByGenre,
+    getByDirector
 }
