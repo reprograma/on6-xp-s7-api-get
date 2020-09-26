@@ -11,4 +11,7 @@ app.use("/filmes", filmes)
 const estados = require("./routes/estadosRoute")
 app.use("/estados", estados)
 
+const cores = require("./routes/colors-rgbRoute")
+app.use("/cores", cores)
+
 module.exports = app
